@@ -15,7 +15,7 @@ public final class Solution {
     /**
     *declaring the main function.
     *where we call the power function.
-    *@param arg String
+    *@param args String
     */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
@@ -28,7 +28,6 @@ public final class Solution {
     *Need to write the power function and print the output.
     *@param base long.
     *@param exponent long.
-    *@param return is a return type.
     */
     public static long power(final long base, final long exponent) {
         if (exponent == 0) {
