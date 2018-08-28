@@ -28,8 +28,9 @@ public final class Solution {
     public static void roots(final int a, final int b, final int c) {
         double result1, result2;
         // if ((b * b) - (2 * 2 * a * c) >= 0) {
-        result1 = (-b + Math.sqrt(b * b - 2 * 2 * a * c)) / 2 *a;
-        result2 = (-b - Math.sqrt(b * b - 2 * 2 * a * c)) / 2 *a;
+        double res = Math.sqrt(b * b - 2 * 2 * a * c);
+        result1 = (-b + res) / 2 * a;
+        result2 = (-b - res) / 2 * a;
         System.out.println(result1 + " " + result2);
         // }
     }
