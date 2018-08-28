@@ -1,28 +1,38 @@
+/**
+*importing the Scanner class.
+*/
 import java.util.Scanner;
-
+/**
+*the program is about finding the suqre root using.
+*the recursive function.
+*/
 public final class Solution {
-	/*
-	Do not modify this main function.
+	/**
+	*Do not modify this main function.
 	*/
 	private Solution() {
-	/* this is a constructor.
+	/**
+	*this is a constructor.
     */
 	}
+	/**
+	*declaring the main function.
+	*where we call the power function.
+	*/
 	public static void main(final String[] args) {
-		Scanner s=new Scanner(System.in);      
+		Scanner s = new Scanner(System.in);      
         long base = s.nextInt();
         long exponent = s.nextInt();
-        long result=power(base, exponent);
+        long result = power(base, exponent);
         System.out.println(result);
 	}
-	/*
-	Need to write the power function and print the output.
+	/**
+	*Need to write the power function and print the output.
 	*/
 	public static long power(long base, long exponent) {
-		if (exponent==0)
+		if (exponent == 0)
 			return 1;
 		else
-			return base * power(base,exponent-1);
-
+			return base * power(base, exponent-1);
 	}
 }
