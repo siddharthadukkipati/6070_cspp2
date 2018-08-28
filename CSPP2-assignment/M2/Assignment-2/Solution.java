@@ -13,7 +13,7 @@ public final class Solution {
     private Solution() {
     }
     /**
-    *Do not modify this main function.
+    Do not modify this main function.
     */
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -27,11 +27,11 @@ public final class Solution {
     */
     public static void roots(final int a, final int b, final int c) {
         double result1, result2;
-        if ((b * b) - (2 * 2 * a * c) >= 0) {
+        // if ((b * b) - (2 * 2 * a * c) >= 0) {
         result1 = (-b) + Math.sqrt((b * b) - (2 * 2 * a * c));
         result2 = (-b) - Math.sqrt((b * b) - (2 * 2 * a * c));
         System.out.println(result1 / 2 * a + " " + result2 / 2 * a);
-        }
+        // }
     }
     /*
     Need to write the rootsOfQuadraticEquation function.
