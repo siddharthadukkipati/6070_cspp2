@@ -1,4 +1,3 @@
-
 /**
 *importing the Scanner class.
 */
@@ -9,16 +8,14 @@ import java.util.Scanner;
 */
 public final class Solution {
     /**
-    *Do not modify this main function.
-    */
-    private Solution() {
-    /**
     *this is a constructor.
     */
+    private Solution() {
     }
     /**
     *declaring the main function.
     *where we call the power function.
+    *@param arg String
     */
     public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
@@ -29,13 +26,16 @@ public final class Solution {
     }
     /**
     *Need to write the power function and print the output.
+    *@param base long.
+    *@param exponent long.
+    *@param return is a return type.
     */
     public static long power(final long base, final long exponent) {
         if (exponent == 0) {
             return 1;
-            }
+        }
         else {
             return base * power(base, exponent - 1);
-            }
+        }
     }
 }
