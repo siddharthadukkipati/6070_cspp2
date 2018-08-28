@@ -14,6 +14,7 @@ public final class Solution {
     }
     /**
     Do not modify this main function.
+    *@param args String
     */
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
@@ -23,7 +24,10 @@ public final class Solution {
         roots(a, b, c);
         // System.out.println(root2);
     }
-    /*function to find out the roots of the Quadratic Equation.
+    /**function to find out the roots of the Quadratic Equation.
+    *@param a int
+    *@param b int
+    *@param c int
     */
     public static void roots(final int a, final int b, final int c) {
         double result1, result2;
