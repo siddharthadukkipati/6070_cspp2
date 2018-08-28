@@ -1,3 +1,4 @@
+
 /**
 *importing the Scanner class.
 */
@@ -20,7 +21,7 @@ public final class Solution {
     *where we call the power function.
     */
     public static void main(final String[] args) {
-        Scanner s = new Scanner(System.in); 
+        Scanner s = new Scanner(System.in);
         final long base = s.nextInt();
         final long exponent = s.nextInt();
         final long result = power(base, exponent);
@@ -32,7 +33,7 @@ public final class Solution {
     public static long power(final long base, final long exponent) {
         if (exponent == 0) {
             return 1;
-        }
+    }
         else {
             return base * power(base, exponent - 1);
         }
