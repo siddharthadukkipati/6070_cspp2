@@ -15,7 +15,7 @@ class SumOfNNumbers {
     *This is the main method of the program.
     *@param args String
     */
-    public static void main(String[] final args) {
+    public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         final int n = scan.nextInt();
         final int sum = 0;
