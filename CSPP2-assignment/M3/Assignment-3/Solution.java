@@ -17,7 +17,7 @@ public final class Solution {
     */
     public static void main(String[] args) {
 
-        Scanner s = new Scanner(System.in);      
+        Scanner s = new Scanner(System.in);
         int n1 = s.nextInt();
         int n2 = s.nextInt();
         gcd(n1, n2);
@@ -30,7 +30,7 @@ public final class Solution {
     *a method to compute gcd.
     *@param n1 int
     *@param n2 int
-    *@return result 
+    *@return result
     */
     public static int gcd(final int n1, final int n2) {
         int result = 1;
