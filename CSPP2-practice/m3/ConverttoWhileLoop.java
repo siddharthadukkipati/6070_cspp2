@@ -6,7 +6,7 @@ class ConverttoWhileLoop {
     /**
     *This is a default constructor.
     */
-    private Convert {
+    private Convert() {
 
     }
 /**
