@@ -7,15 +7,12 @@ import java.util.Scanner;
 */
 public class Solution {
     /**
-    Fill this main function to print maximum of given array.
-    */
-    /**.
     *defining the constructor.
     */
     private void solution() {
     }
     /**
-    *defining the main method
+    *defining the main method.
     *@param args String.
     */
     public static void main(final String[] args) {
