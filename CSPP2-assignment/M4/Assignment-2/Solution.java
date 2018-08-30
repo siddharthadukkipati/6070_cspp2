@@ -19,28 +19,28 @@ public class Solution {
         Scanner scan = new Scanner(System.in);
         int row1 = scan.nextInt();
         int col1 = scan.nextInt();
-        int[][] matrix_1 = new int[row1][col1];
+        int[][] matrix1 = new int[row1][col1];
         int[][] result = new int[row1][col1];
         for (int i = 0; i < row1; i++) {
             for (int j = 0; j < col1; j++) {
-                matrix_1[i][j] = scan.nextInt();
+                matrix1[i][j] = scan.nextInt();
             }
         }
         int row2 = scan.nextInt();
         int col2 = scan.nextInt();
-        int[][] matrix_2 = new int[row2][col2];
+        int[][] matrix2 = new int[row2][col2];
         for (int i = 0; i < row2; i++) {
             for (int j = 0; j < col2; j++) {
-                matrix_2[i][j] = scan.nextInt();
+                matrix2[i][j] = scan.nextInt();
             }
         }
-        if (row1 == row2 && col1 == col2) { 
+        if (row1 == row2 && col1 == col2) {
             for (int i = 0; i < row1; i++) {
                 for (int j = 0; j < col1 - 1; j++) {
-                    result[i][j] = matrix_1[i][j] + matrix_2[i][j];
+                    result[i][j] = matrix1[i][j] + matrix2[i][j];
                     System.out.print(result[i][j] + " ");
                 }
-                result[i][col1 - 1] = matrix_1[i][col1 - 1] + matrix_2[i][col2 - 1];
+                result[i][col1 - 1] = matrix1[i][col1 - 1] + matrix2[i][col2 - 1];
                 System.out.println(result[i][col1 - 1]);
             }
         } else {
