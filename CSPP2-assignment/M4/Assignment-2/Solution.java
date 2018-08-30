@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
 *implementing Solution class.
 */
-public class Solution {
+public final class Solution {
     /**
     Fill the main function to print resultant of addition of matrices.
     */
@@ -15,7 +15,7 @@ public class Solution {
     *defining main menthod.
     *@param args String.
     */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         int r1 = scan.nextInt();
         int c1 = scan.nextInt();
