@@ -9,7 +9,7 @@ public class Solution {
     /**
     Fill this main function to print maximum of given array.
     */
-    /**
+    /**.
     *defining the constructor.
     */
     private void solution() {
