@@ -19,16 +19,18 @@ public class Solution {
     {
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
-        for(int i = 0; i < n; i++) {
+        for (int i = 0; i < n; i++) {
             String s = scan.next();
-            int res = binaryToDecimal(s);//Write binaryToDecimal function
+            int res = binaryToDecimal(s); //Write binaryToDecimal function
             System.out.println(res);
         }
     }
     /**
     *implementing a function for binary to decimal conversion.
+    *@param s String.
+    *@return res int.
     */
-    public static int binaryToDecimal(String s) {
+    public static int binaryToDecimal(final String s) {
         double res = 0;
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '1') {
