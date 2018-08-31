@@ -15,8 +15,7 @@ public class Solution {
     *Do not modify this main function.
     *@param args String.
     */
-    public static void main(final String[] args)
-    {
+    public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
         for (int i = 0; i < n; i++) {
