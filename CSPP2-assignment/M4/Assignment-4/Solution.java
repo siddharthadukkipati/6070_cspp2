@@ -18,8 +18,7 @@ public class Solution {
     *Do not modify the main function.
     *@param args String.
     */
-    public static void main(final String[] args)
-    {
+    public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
         String reverse = reverseString(s);
@@ -28,9 +27,9 @@ public class Solution {
     /**
     *Implementing a function for reverse of a string.
     *@param s String.
-    *@return reverse. 
+    *@return reverse.
     */
-    public static String reverseString(String s) {
+    public static String reverseString(final String s) {
         int a = s.length() - 1;
         // System.out.println(a);
         String reverse = "";
