@@ -22,18 +22,18 @@ public final class Solution {
      */
     static void oddComposites(final int n) {
 	// write your code here
-        int count = 0;
+        int flag = 0;
         final int a = 3;
-        for(int i = a; i <= n; i++) {
+        for (int i = a; i <= n; i++) {
                 if (i % 2 != 0) {
-                    count = 0;
+                    flag = 0;
                     for (int j = a; j < i; j++) {
                         if (i % j == 0) {
-                            count++;
+                            flag++;
                         }
                         // System.out.println(i);
                     }
-                    if (count > 0) {
+                    if (flag > 0) {
                        System.out.println(i); 
                     }
                     // System.out.println(i);
