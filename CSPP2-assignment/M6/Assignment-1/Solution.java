@@ -30,10 +30,12 @@ public final class Solution {
                         if (i % j == 0) {
                             count++;
                         }
+                        // System.out.println(i);
                     }
                     if (count > 0) {
-                        
-                    }System.out.println(i);
+                       System.out.println(i); 
+                    }
+                    // System.out.println(i);
                 }
         }
     }
