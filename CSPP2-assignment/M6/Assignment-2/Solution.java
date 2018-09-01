@@ -25,44 +25,20 @@ final class Solution {
     static int[][] roundHundred(final int[][] a, final int rows, final int columns) {
 
 	// write ypur code here
-	for (int i = 0; i < rows; i++) {
-		for (int j = 0; j < columns; j++) {
-			if (a[i][j] > 0 && a[i][j] < 50) {
-				a[i][j] = 0;
+	for (int i = 0; i < rows; i++){
+		// final 100;
+		// final 50;
+		for (int j = 0; j < columns; j++){
+			int rem = a[i][j] % 100;
+			int round = 0;
+			if (rem >= 50) {
+				round = a[i][j] - rem + 100;
+				a[i][j] = round;
+				round = a[i][j] - rem;
+				a[i][j] = round;
 			}
-			else if (a[i][j] >= 50 && a[i][j] < 100) {
-				a[i][j] = 100;
-			}
-			else if (a[i][j] >= 100 && a[i][j] < 150) {
-				a[i][j] = 100;
-			}
-			else if (a[i][j] >= 150 && a[i][j] < 200) {
-				a[i][j] = 200;
-			}
-			else if (a[i][j] >= 200 && a[i][j] < 250) {
-				a[i][j] = 200;
-			}
-			else if (a[i][j] >= 250 && a[i][j] < 300) {
-				a[i][j] = 300;
-			}
-			else if (a[i][j] >= 300 && a[i][j] < 350) {
-				a[i][j] = 300;
-			}
-			else if (a[i][j] >= 400 && a[i][j] < 450) {
-				a[i][j] = 400;
-			}
-			else if (a[i][j] >= 450 && a[i][j] < 500) {
-				a[i][j] = 400;
-			}
-			else if (a[i][j] >= 500 && a[i][j] < 550) {
-				a[i][j] = 500;
-			}
-			else if (a[i][j] >= 550 && a[i][j] < 600) {
-				a[i][j] = 500;
-			}
-		}		
-	}
-	return a;
+		}
+	} return a;
     }
     /**
      * Main function.
