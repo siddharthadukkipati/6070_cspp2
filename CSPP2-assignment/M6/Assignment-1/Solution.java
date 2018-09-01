@@ -23,10 +23,11 @@ public final class Solution {
     static void oddComposites(final int n) {
 	// write your code here
         int count = 0;
-        for(int i = 3; i <= n; i++) {
+        final int a = 3;
+        for(int i = a; i <= n; i++) {
                 if (i % 2 != 0) {
                     count = 0;
-                    for (int j = 3; j < i; j++) {
+                    for (int j = a; j < i; j++) {
                         if (i % j == 0) {
                             count++;
                         }
