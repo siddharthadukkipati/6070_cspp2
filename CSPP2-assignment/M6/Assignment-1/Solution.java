@@ -21,7 +21,7 @@ public final class Solution {
      * @param n Integer.
      */
     static void oddComposites(final int n) {
-	// write your code here
+    // write your code here
         int flag = 0;
         final int a = 3;
         for (int i = a; i <= n; i++) {
@@ -34,7 +34,7 @@ public final class Solution {
                         // System.out.println(i);
                     }
                     if (flag > 0) {
-                       System.out.println(i); 
+                       System.out.println(i);
                     }
                     // System.out.println(i);
                 }
@@ -50,4 +50,3 @@ public final class Solution {
         oddComposites(n);
     }
 }
-
