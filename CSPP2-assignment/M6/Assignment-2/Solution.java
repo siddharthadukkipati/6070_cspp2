@@ -32,7 +32,7 @@ final class Solution {
 			int rem = a[i][j] % 100;
 			int round = 0;
 			if (rem >= 50) {
-				round = a[i][j] - rem + 100;
+				round = a[i][j] - rem + 50;
 				a[i][j] = round;
 				round = a[i][j] - rem;
 				a[i][j] = round;
