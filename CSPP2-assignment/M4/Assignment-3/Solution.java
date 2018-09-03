@@ -20,23 +20,23 @@ public class Solution {
         int n = scan.nextInt();
         for (int i = 0; i < n; i++) {
             String s = scan.next();
-            int res = binaryToDecimal(s); //Write binaryToDecimal function
-            System.out.println(res);
+            int resultant_string = binaryToDecimal(s); //Write binaryToDecimal function
+            System.out.println(resultant_string);
         }
     }
     /**
     *implementing a function for binary to decimal conversion.
     *@param s String.
-    *@return res int.
+    *@return resultant_string int.
     */
     public static int binaryToDecimal(final String s) {
-        double res = 0;
+        double resultant_string = 0;
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '1') {
-                res = res + Math.pow(2, s.length() - 1 - i);
+                resultant_string = resultant_string + 
+                Math.pow(2, s.length() - 1 - i);
             }
         }
-        return (int) res;
+        return (int) resultant_string;
     }
-
 }
