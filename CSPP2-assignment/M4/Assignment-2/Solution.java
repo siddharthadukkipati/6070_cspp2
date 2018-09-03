@@ -40,8 +40,8 @@ public final class Solution {
                     rows[i][j] = matrixOne[i][j] + matrixTwo[i][j];
                     System.out.print(rows[i][j] + " ");
                 }
-                rows[i][columns1 - 1] = matrixOne[i][columns1 - 1] +
-                matrixTwo[i][columns2 - 1];
+                rows[i][columns1 - 1] = matrixOne[i][columns1 - 1]
+                + matrixTwo[i][columns2 - 1];
                 System.out.println(rows[i][columns1 - 1]);
             }
         } else {
