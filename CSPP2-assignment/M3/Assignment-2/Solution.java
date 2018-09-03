@@ -12,16 +12,16 @@ public class Solution {
     private void sol() {
         }
     /**
-    *Fill the main function to print the number of 7's between 1 to n.
+    *Fill the main function to print the number of 7's between 1 to number.
     *@param args String.
     */
     public static void main(final String[] args) {
 
         Scanner scan = new Scanner(System.in);
-        int n = scan.nextInt();
+        int number = scan.nextInt();
         int count = 0;
         final int a = 7, b = 10;
-        for (int i = 0; i <= n; i++) {
+        for (int i = 0; i <= number; i++) {
             // int div = i % 10;
             // int div1 = i / 10;
             // if (div == 7) {
@@ -30,13 +30,13 @@ public class Solution {
             // if (div == 7) {
             //  count1++;
             // }
-            int temp = i;
-            while (temp != 0) {
-                int k = temp % b;
-                if (k == a) {
+            int temporary = i;
+            while (temporary != 0) {
+                int storagevalue = temporary % b;
+                if (storagevalue == a) {
                     count++;
                 }
-                temp = temp / b;
+                temporary = temporary / b;
             }
         }
         System.out.println(count);
