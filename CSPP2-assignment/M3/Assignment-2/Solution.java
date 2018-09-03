@@ -22,14 +22,6 @@ public class Solution {
         int count = 0;
         final int a = 7, b = 10;
         for (int i = 0; i <= number; i++) {
-            // int div = i % 10;
-            // int div1 = i / 10;
-            // if (div == 7) {
-            //  count++;
-            // }
-            // if (div == 7) {
-            //  count1++;
-            // }
             int temporary = i;
             while (temporary != 0) {
                 int storagevalue = temporary % b;
