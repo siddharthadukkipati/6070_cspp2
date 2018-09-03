@@ -33,8 +33,8 @@ public class Solution {
         double resultantstring = 0;
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '1') {
-                resultantstring = resultantstring +
-                Math.pow(2, s.length() - 1 - i);
+                resultantstring = resultantstring
+                + Math.pow(2, s.length() - 1 - i);
             }
         }
         return (int) resultantstring;
