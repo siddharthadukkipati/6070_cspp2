@@ -18,23 +18,23 @@ public final class Solution {
     */
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
-        int a = scan.nextInt();
-        int b = scan.nextInt();
-        int c = scan.nextInt();
-        roots(a, b, c);
+        int numberOne = scan.nextInt();
+        int numberTwo = scan.nextInt();
+        int ddnumberThree = scan.nextInt();
+        roots(numberOne, numberTwo, ddnumberThree);
         // System.out.println(root2);
     }
     /**function to find out the roots of the Quadratic Equation.
-    *@param a int
-    *@param b int
-    *@param c int
+    *@param numberOne int
+    *@param numberTwo int
+    *@param ddnumberThree int
     */
-    public static void roots(final int a, final int b, final int c) {
+    public static void roots(final int numberOne, final int numberTwo, final int ddnumberThree) {
         double result1, result2;
-        // if ((b * b) - (2 * 2 * a * c) >= 0) {
-        double res = Math.sqrt(b * b - 2 * 2 * a * c);
-        result1 = (-b + res) / (2 * a);
-        result2 = (-b - res) / (2 * a);
+        // if ((numberTwo * numberTwo) - (2 * 2 * numberOne * ddnumberThree) >= 0) {
+        double result = Math.sqrt(numberTwo * numberTwo - 2 * 2 * numberOne * ddnumberThree);
+        result1 = (-numberTwo + result) / (2 * numberOne);
+        result2 = (-numberTwo - result) / (2 * numberOne);
         System.out.println(result1 + " " + result2);
         // }
     }
