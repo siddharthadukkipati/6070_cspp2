@@ -18,16 +18,16 @@ public class Solution {
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         // System.out.println("Enter the array size");
-        int n = sc.nextInt();
-        int[] a = new int[n];
+        int sizeOfArray = sc.nextInt();
+        int[] listOfNumbers = new int[sizeOfArray];
         int max;
-        for (int i = 0; i < n; i++) {
-            a[i] = sc.nextInt();
+        for (int i = 0; i < sizeOfArray; i++) {
+            listOfNumbers[i] = sc.nextInt();
         }
-        max = a[0];
-        for (int i = 0; i < n; i++) {
-            if (max < a[i]) {
-                max = a[i];
+        max = listOfNumbers[0];
+        for (int i = 0; i < sizeOfArray; i++) {
+            if (max < listOfNumbers[i]) {
+                max = listOfNumbers[i];
             }
         }
         System.out.println(max);
