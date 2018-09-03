@@ -19,22 +19,22 @@ public class Solution {
         Scanner scan = new Scanner(System.in);
         int n = scan.nextInt();
         for (int i = 0; i < n; i++) {
-            String s = scan.next();
-            int resultantstring = binaryToDecimal(s); //Write binaryToDecimal function
+            String inpstring = scan.next();
+            int resultantstring = binaryToDecimal(inpstring);
             System.out.println(resultantstring);
         }
     }
     /**
-    *implementing a function for binary to decimal conversion.
-    *@param s String.
+    *Method for binary to decimal conversion.
+    *@param inpstring String.
     *@return resultantstring int.
     */
-    public static int binaryToDecimal(final String s) {
+    public static int binaryToDecimal(final String inpstring) {
         double resultantstring = 0;
-        for (int i = 0; i < s.length(); i++) {
-            if (s.charAt(i) == '1') {
+        for (int i = 0; i < inpstring.length(); i++) {
+            if (inpstring.charAt(i) == '1') {
                 resultantstring = resultantstring
-                + Math.pow(2, s.length() - 1 - i);
+                + Math.pow(2, inpstring.length() - 1 - i);
             }
         }
         return (int) resultantstring;
