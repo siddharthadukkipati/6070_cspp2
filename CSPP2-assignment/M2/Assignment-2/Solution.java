@@ -32,9 +32,8 @@ public final class Solution {
     public static void roots(final int numberOne, final int numberTwo,
         final int ddnumberThree) {
         double result1, result2;
-        // if ((numberTwo * numberTwo) - (2 * 2 * numberOne * ddnumberThree) >= 0) {
-        double result = Math.sqrt(numberTwo *
-            numberTwo - 2 * 2 * numberOne * ddnumberThree);
+        double result = Math.sqrt(numberTwo
+        * numberTwo - 2 * 2 * numberOne * ddnumberThree);
         result1 = (-numberTwo + result) / (2 * numberOne);
         result2 = (-numberTwo - result) / (2 * numberOne);
         System.out.println(result1 + " " + result2);
