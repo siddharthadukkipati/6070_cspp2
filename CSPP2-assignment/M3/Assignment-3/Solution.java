@@ -17,25 +17,25 @@ public final class Solution {
     */
     public static void main(final String[] args) {
 
-        Scanner s = new Scanner(System.in);
-        int n1 = s.nextInt();
-        int n2 = s.nextInt();
-        gcd(n1, n2);
-        System.out.println(gcd(n1, n2));
+        Scanner inpstring = new Scanner(System.in);
+        int number1 = inpstring.nextInt();
+        int number2 = inpstring.nextInt();
+        gcd(number1, number2);
+        System.out.println(gcd(number1, number2));
     }
     /*
     Need to write the gcd function and print the output.
     */
     /**
     *a method to compute gcd.
-    *@param n1 int
-    *@param n2 int
+    *@param number1 int
+    *@param number2 int
     *@return result
     */
-    public static int gcd(final int n1, final int n2) {
+    public static int gcd(final int number1, final int number2) {
         int result = 1;
-        for (int i = 1; i <= n1 && i <= n2; i++) {
-            if (n1 % i == 0 && n2 % i == 0) {
+        for (int i = 1; i <= number1 && i <= number2; i++) {
+            if (number1 % i == 0 && number2 % i == 0) {
                 result = i;
             }
         }
