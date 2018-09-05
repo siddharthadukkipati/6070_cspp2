@@ -16,15 +16,15 @@ import java.util.Scanner;
  *
  */
 public class Fibonacci {
-    /*
+    //creating the list object of the list.java file and calling the method add here.
+    static List l = new List();
+    /**
      * fib is a static method takes a argument n
      * n is the count of the fibonacci numbers to be generated.
      * The method returns a List with the n fibonacci numbers.
      *
      * Look for the hint.txt if some of the testcases fail.
-     */
-    //creating the list object of the list.java file and calling the method add here.
-    static List l = new List(); 
+     */ 
     public static List fib(int n) {
         l.add(0);
         l.add(1);
