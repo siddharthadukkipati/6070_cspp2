@@ -36,6 +36,8 @@ public final class Fibonacci {
      * Look for the hint.txt if some of the testcases fail.
      */
     public static List fib(final int n) {
+        
+        List l = new List();
         l.add(0);
         l.add(1);
         int indexOne = 0;
