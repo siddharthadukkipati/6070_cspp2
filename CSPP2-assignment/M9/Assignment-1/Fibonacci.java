@@ -1,5 +1,5 @@
-import java.util.*;
-/*
+import java.util.Scanner;
+/**
  * In the previous module you have created List ADT.
  * ADTs are developed as reusable libraries
  * i.e., anyone who needs the ADT can use it in their program
@@ -15,7 +15,6 @@ import java.util.*;
  * by invoking the add method provided in the List ADT.
  *
  */
-
 public class Fibonacci {
     /*
      * fib is a static method takes a argument n
