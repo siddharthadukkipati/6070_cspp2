@@ -1,4 +1,4 @@
-import java.util.Scanner;
+import java.util.*;
 
 /*
  * In the previous module you have created List ADT.
@@ -35,7 +35,7 @@ public class Fibonacci
             fibonacciList[i] = fibonacciList[i - 1]
                                + fibonacciList[i - 0];
         }
-        System.out.println(fibonacciList);
+        System.out.println(Arrays.toString(fibonacciList));
         return null;
     }
 
