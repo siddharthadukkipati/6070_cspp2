@@ -79,6 +79,7 @@ public class List {
         size = 0;
     }
 
+
     /*
      * Overloaded constructor with list capacity as argument
      * The default constructor sets the list capacity to 10
@@ -93,6 +94,10 @@ public class List {
      * constructor.
      * 
      */
+    List(final int n) {
+        size = 0;
+        list = new int[n];
+    }
 
     // todo - add an overloaded constructor here
 

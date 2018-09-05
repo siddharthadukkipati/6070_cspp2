@@ -37,7 +37,7 @@ public final class Fibonacci {
      */
     public static List fib(final int n) {
         
-        List l = new List();
+        List l = new List(n);
         l.add(0);
         l.add(1);
         int indexOne = 0;
