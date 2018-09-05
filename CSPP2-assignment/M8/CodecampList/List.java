@@ -75,19 +75,22 @@ public final class List {
         final int n = 10;
         arrayList = new int[n];
     }
+    /**
+    *Add all method.
+    */
     public void addAll(int[] items) {
         int temp = 0;
-        for(int i = size; i < (size + items.length); i++) {
+        for (int i = size; i < (size + items.length); i++) {
             arrayList[i] = items[temp];
             temp++;
         }
         //System.out.println(Arrays.toString(arrayList));
-
-
-
     }
-    public void add(int index, int item) {
-        for(int i = size; i > index; i--) {
+    /**
+    *Add method.
+    */
+    public void add(final int index, final int item) {
+        for (int i = size; i > index; i--) {
             arrayList[i] = arrayList[i - 1];
         }
         arrayList[index] = item;
@@ -95,7 +98,10 @@ public final class List {
 
 
     }
-    public int count(int item) {
+    /**
+    *This method uses to count the occurance of the item.
+    */
+    public int count(final int item) {
         int count1 = 0;
         for (int i = 0; i < size; i++) {
             if (arrayList[i] == item) {
@@ -282,8 +288,9 @@ public final class List {
      */
     public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
+        final int a = 3;
         List l = new List();
-        int[] items = new int[]{1, 2, 3};
+        int[] items = new int[]{1, 2, a};
 
         // code to read the test cases input file
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
@@ -296,13 +303,12 @@ public final class List {
             // based on the list operation invoke the corresponding method
             switch (tokens[0]) {
                 case "add":
-                if (tokens.length > 2){
+                if (tokens.length > 2) {
                     l.add(Integer.parseInt(tokens[1]),
                         Integer.parseInt(tokens[2]));
                 } else {
                     l.add(Integer.parseInt(tokens[1]));
                 }
-                
                 break;
                 case "size":
                 // invoke size method and print the list size
