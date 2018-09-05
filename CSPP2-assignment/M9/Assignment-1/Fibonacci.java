@@ -18,7 +18,7 @@ import java.util.Scanner;
 public final class Fibonacci {
     /**
     *a private constructor which helps in preventing the default parameter-less
-    *constructor from being used elsewhere in your code. 
+    *constructor from being used elsewhere in your code.
     */
     private Fibonacci() {
 
@@ -49,7 +49,7 @@ public final class Fibonacci {
         }
         return l;
         }
-    /**
+    /**.
     *main method
     *@param args String.
     */
