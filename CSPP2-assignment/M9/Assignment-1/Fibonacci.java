@@ -26,23 +26,23 @@ public final class Fibonacci {
     /**creating the list object of the list.java file and calling
     *the method add here.
     */
-    static List objList = new List();
+    private static List objList = new List();
     /**
-     * fib is a static method takes a argument number
-     * number is the count of the fibonacci numbers to be generated.
-     * The method returns a List with the number fibonacci numbers.
-     *@param number integer
+     * fib is a static method takes a argument count
+     * count(n) is the count of the fibonacci numbers to be generated.
+     * The method returns a List with the count fibonacci numbers.
+     *@param count integer
      *@return objList List
      * Look for the hint.txt if some of the testcases fail.
      */
-    public static List fib(final int number) {
-        List objList = new List(number);
+    public static List fib(final int count) {
+        List objList = new List(count);
         objList.add(0);
         objList.add(1);
         int indexOne = 0;
         int indexTwo = 1;
         int sum;
-        for (int i = 2; i < number; i++) {
+        for (int i = 2; i < count; i++) {
             sum = indexOne + indexTwo;
             indexOne = indexTwo;
             indexTwo = sum;
@@ -55,8 +55,8 @@ public final class Fibonacci {
     *@param args String.
     */
     public static void main(final String[] args) {
-        Scanner s = new Scanner(System.in);
-        int number = s.nextInt();
-        System.out.println(fib(number));
+        Scanner scan = new Scanner(System.in);
+        int count = scan.nextInt();
+        System.out.println(fib(count));
     }
 }
