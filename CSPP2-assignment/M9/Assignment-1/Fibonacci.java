@@ -1,5 +1,5 @@
 import java.util.Scanner;
-/**
+/**.
  * In the previous module you have created List ADT.
  * ADTs are developed as reusable libraries
  * i.e., anyone who needs the ADT can use it in their program
@@ -15,8 +15,16 @@ import java.util.Scanner;
  * by invoking the add method provided in the List ADT.
  *
  */
-public class Fibonacci {
-    /**creating the list object of the list.java file and calling the method add here.
+public final class Fibonacci {
+    /**
+    *a private constructor which helps in preventing the default parameter-less
+    *constructor from being used elsewhere in your code. 
+    */
+    private Fibonacci() {
+
+    }
+    /**creating the list object of the list.java file and calling
+    *the method add here.
     */
     static List l = new List();
     /**
