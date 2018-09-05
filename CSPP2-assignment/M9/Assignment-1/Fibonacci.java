@@ -26,7 +26,7 @@ public class Fibonacci {
      *@param n integer
      *@return l List
      * Look for the hint.txt if some of the testcases fail.
-     */ 
+     */
     public static List fib(final int n) {
         l.add(0);
         l.add(1);
@@ -39,21 +39,13 @@ public class Fibonacci {
             indexTwo = sum;
             l.add(sum);
         }
-        // todo - complete this method
-        // int[] fibonacciList = new int[n];
-        // fibonacciList[0] = 0;
-        // fibonacciList[1] = 1;
-        // for (int i = 2; i < n; i++) {
-        //     fibonacciList[i] = fibonacciList[i - 1]
-        //                        + fibonacciList[i - 0];
         return l;
         }
-        // System.out.println(Arrays.toString(fibonacciList));
     /**
     *main method
     *@param args String.
     */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         Scanner s = new Scanner(System.in);
         int n = s.nextInt();
         System.out.println(fib(n));
