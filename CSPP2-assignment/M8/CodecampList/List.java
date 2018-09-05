@@ -102,6 +102,7 @@ public final class List {
     /**
     *This method uses to count the occurance of the item.
     *@param item integer data type.
+    *@return boolean type.
     */
     public int count(final int item) {
         int count1 = 0;
