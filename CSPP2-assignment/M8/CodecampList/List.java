@@ -77,8 +77,9 @@ public final class List {
     }
     /**
     *Add all method.
+    *@param items integer data type.
     */
-    public void addAll(int[] items) {
+    public void addAll(final int[] items) {
         int temp = 0;
         for (int i = size; i < (size + items.length); i++) {
             arrayList[i] = items[temp];
@@ -88,6 +89,8 @@ public final class List {
     }
     /**
     *Add method.
+    *@param index integer data type.
+    *@param item integer data type.
     */
     public void add(final int index, final int item) {
         for (int i = size; i > index; i--) {
@@ -95,11 +98,10 @@ public final class List {
         }
         arrayList[index] = item;
         size++;
-
-
     }
     /**
     *This method uses to count the occurance of the item.
+    *@param item integer data type.
     */
     public int count(final int item) {
         int count1 = 0;
