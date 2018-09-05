@@ -76,37 +76,37 @@ public final class List {
         arrayList = new int[n];
     }
     public void addAll(int[] items) {
-    	int temp = 0;
-    	for(int i = size; i < (size + items.length); i++) {
-    		arrayList[i] = items[temp];
-    		temp++;
-    	}
-    	//System.out.println(Arrays.toString(arrayList));
+        int temp = 0;
+        for(int i = size; i < (size + items.length); i++) {
+            arrayList[i] = items[temp];
+            temp++;
+        }
+        //System.out.println(Arrays.toString(arrayList));
 
 
 
     }
     public void add(int index, int item) {
-    	for(int i = size; i > index; i--) {
-    		arrayList[i] = arrayList[i-1];
-    	}
-    	arrayList[index] = item;
-    	size++;
+        for(int i = size; i > index; i--) {
+            arrayList[i] = arrayList[i - 1];
+        }
+        arrayList[index] = item;
+        size++;
 
 
     }
     public int count(int item) {
-    	int count1 = 0;
-    	for (int i = 0; i < size; i++) {
-    		if(arrayList[i] == item){
-    			count1++;
-    		}
-    	}
-    	if (count1 > 0) {
-    		return count1;
-    	} else {
-    		return -1;
-    	}
+        int count1 = 0;
+        for (int i = 0; i < size; i++) {
+            if (arrayList[i] == item) {
+                count1++;
+            }
+        }
+        if (count1 > 0) {
+            return count1;
+        } else {
+            return -1;
+        }
     }
     /**
      * The add method does what the name suggests.
@@ -297,9 +297,10 @@ public final class List {
             switch (tokens[0]) {
                 case "add":
                 if (tokens.length > 2){
-                	l.add(Integer.parseInt(tokens[1]), Integer.parseInt(tokens[2]));
+                    l.add(Integer.parseInt(tokens[1]),
+                        Integer.parseInt(tokens[2]));
                 } else {
-                	l.add(Integer.parseInt(tokens[1]));
+                    l.add(Integer.parseInt(tokens[1]));
                 }
                 
                 break;
