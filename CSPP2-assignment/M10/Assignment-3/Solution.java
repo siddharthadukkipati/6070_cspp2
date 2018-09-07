@@ -1,10 +1,14 @@
 import java.io.BufferedInputStream;
 import java.util.Scanner;
-//A Class is implemented for Student details
+/**A Class is implemented for Student details.
+*/
 class Student {
     private String name;
-
-    public Student(String name) {
+    /**
+    *Student Constructor.
+    *@param name String type.
+    */
+    public Student(final String name) {
         //A constructor used to initialize the instance variables
         this.name = name;
     }
@@ -33,7 +37,7 @@ class Student {
 public class Solution {
 
 
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         // create an object of the list to invoke methods on it
         Scanner stdin = new Scanner(new BufferedInputStream(System.in));
         String objectType = stdin.nextLine();
