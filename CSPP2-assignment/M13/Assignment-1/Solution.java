@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 /**
  * Class for set.
- * @author :
+ * @author : Siddhartha
  */
 class Set {
     //your code goes here...
