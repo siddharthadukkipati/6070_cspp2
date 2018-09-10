@@ -84,7 +84,8 @@ class Set {
     }
     /**
      * function_description.
-     *This fucntion checks if the gievn element is present in the given element or not.
+     *This fucntion checks if the gievn element is present in.
+     *the given element or not.
      * @param item  The item
      * @return which return the boolean type if the values are present.
      *it returns True else False.
@@ -190,10 +191,11 @@ class Set {
     /**
      * function_description.
      * @param item the item.
-     * @return result is the integer data type which stores the cartesian Product.
+     * @return result is the integer data type which.
+     *stores the cartesian Product.
      */
     public int[][] cartesianProduct(final Set item) {
-        int [][] result = new int[this.size() * item.size()][2];
+        int[][] result = new int[this.size() * item.size()][2];
         int k = -1;
         if (this.size() == 0 || item.size() == 0) {
             return null;
@@ -208,6 +210,8 @@ class Set {
     }
     /**
     *to get the index values we define a method named get method.
+    *@param index integer type.
+    *@return index value of the set.
     */
     public int get(final int index) {
         return set[index];
