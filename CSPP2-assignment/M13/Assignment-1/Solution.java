@@ -185,7 +185,11 @@ class Set {
      * @return     { description_of_the_return_value }
      */
     public String retainAll(final int[] a) {
-        return null;
+        Set other = new Set();
+        for (int item : a) {
+            other.add(item);
+        }
+        return intersection(other);
     }
     /**
      * function_description.
