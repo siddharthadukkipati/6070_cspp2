@@ -76,7 +76,7 @@ class Set {
 
     /**
      * function_description.
-     *
+     * which gives the size of the set.
      * @return     { description_of_the_return_value }
      **/
     public int size() {
@@ -84,10 +84,10 @@ class Set {
     }
     /**
      * function_description.
-     *
-     * @param      item  The item
-     *
-     * @return     { description_of_the_return_value }
+     *This fucntion checks if the gievn element is present in the given element or not.
+     * @param item  The item
+     * @return which return the boolean type if the values are present.
+     *it returns True else False.
      **/
     public boolean contains(final int item) {
         // return true;
@@ -104,7 +104,6 @@ class Set {
     }
     /**
      * Returns setList string representation of the object.
-     *
      * @return     String representation of the object.
      **/
     public String toString() {
@@ -120,8 +119,7 @@ class Set {
         return res;
     }
     /**
-     * function_description.
-     *
+     *This function add's the elements into the set and stores the values.
      * @param      item  The item
      */
     public void add(final int[] item) {
@@ -141,10 +139,10 @@ class Set {
     }
     /**
      * function_description.
-     *
-     * @param      setList     { parameter_description }
-     *
-     * @return     { description_of_the_return_value }
+     *This function returns the insection values between two sets
+     *which is the common elements in both the sets.
+     *@param setList array.
+     *@return returns the result of the intesection of two sets.
      **/
     public String intersection(final Set setList) {
         int members = 0;
@@ -179,10 +177,8 @@ class Set {
     }
     /**
      * function_description.
-     *
-     * @param      setList  The item
-     *
-     * @return     { description_of_the_return_value }
+     * @param setList the item
+     * @return items whihc are present in the setList.
      */
     public String retainAll(final int[] setList) {
         Set other = new Set();
@@ -193,10 +189,8 @@ class Set {
     }
     /**
      * function_description.
-     *
-     * @param      item  The item
-     *
-     * @return     { description_of_the_return_value }
+     * @param item the item.
+     * @return result is the integer data type which stores the cartesian Product.
      */
     public int[][] cartesianProduct(final Set item) {
         int [][] result = new int[this.size() * item.size()][2];
