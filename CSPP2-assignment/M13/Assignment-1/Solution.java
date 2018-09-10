@@ -32,10 +32,10 @@ class Set {
     /**
      * Constructs the object.
      *
-     * @param      cap   The capability
+     * @param      capacity   The capability
      **/
-    Set(final int cap) {
-        set = new int[cap];
+    Set(final int capacity) {
+        set = new int[capacity];
         size = 0;
     }
     /**
@@ -53,8 +53,8 @@ class Set {
      * function_description.
      **/
     private void resize() {
-        int cap = 2 * size;
-        set = Arrays.copyOf(set, cap);
+        int capacity = 2 * size;
+        set = Arrays.copyOf(set, capacity);
     }
 
     /**
@@ -103,7 +103,7 @@ class Set {
         return false;
     }
     /**
-     * Returns a string representation of the object.
+     * Returns setList string representation of the object.
      *
      * @return     String representation of the object.
      **/
@@ -142,15 +142,15 @@ class Set {
     /**
      * function_description.
      *
-     * @param      a     { parameter_description }
+     * @param      setList     { parameter_description }
      *
      * @return     { description_of_the_return_value }
      **/
-    public String intersection(final Set a) {
+    public String intersection(final Set setList) {
         int members = 0;
         int x = 0;
         for (int i = 0; i < set.length; i++) {
-        if (a.contains(set[i])) {
+        if (setList.contains(set[i])) {
             members++;
         }
         }
@@ -158,7 +158,7 @@ class Set {
         int[] newMembers = new int[members];
         int position = 0;
         for (int i = 0; i < set.length; i++) {
-        if (a.contains(set[i])) {
+        if (setList.contains(set[i])) {
             // System.out.println(set[i]);
             x = set[i];
             newMembers[position++] = set[i];
@@ -180,13 +180,13 @@ class Set {
     /**
      * function_description.
      *
-     * @param      a  The item
+     * @param      setList  The item
      *
      * @return     { description_of_the_return_value }
      */
-    public String retainAll(final int[] a) {
+    public String retainAll(final int[] setList) {
         Set other = new Set();
-        for (int item : a) {
+        for (int item : setList) {
             other.add(item);
         }
         return intersection(other);
@@ -199,7 +199,24 @@ class Set {
      * @return     { description_of_the_return_value }
      */
     public int[][] cartesianProduct(final Set item) {
-        return null;
+        int [][] result = new int[this.size() * item.size()][2];
+        int k = -1;
+        if (this.size() == 0 || item.size() == 0) {
+            return null;
+        }
+        for (int i = 0; i < this.size(); i++) {
+            for (int j = 0; j < item.size(); j++) {
+                result[++k][0] = this.get(i);
+                result[k][1] = item.get(j);
+            }
+        }
+        return result;
+    }
+    /**
+    *to get the index values we define a method named get method.
+    */
+    public int get(final int index) {
+        return set[index];
     }
 }
 /**
