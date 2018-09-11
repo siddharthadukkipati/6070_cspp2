@@ -3,20 +3,21 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 /**
- * List ADT.
+ * defining the class List ADT.
  */
 public class List {
 
   /**
-   * list object.
+   *Creating the list object.
    */
   private int[] list;
   /**
-   * size of the list.
+   *creating the private variable as size of the list.
    */
   private int size;
   /**
    * Constructs the object.
+   * Creating the List constructor with default values.
    */
   public List() {
     final int max = 10;
@@ -25,17 +26,16 @@ public class List {
   }
   /**
    * Constructs the object.
-   *
-   * @param      capacity  The capacity
+   *Constructs the over ride values as the capacity.
+   * @param capacity  The capacity.
    */
   public List(final int capacity) {
     list = new int[capacity];
     size = 0;
   }
   /**
-  * Add an element to the list.
-  *
-  * @param      item  The item
+  *This method add's the elements into the list and then stores the values.
+  * @param      item  values which has to be stored.
   */
   public void add(final int item) {
     //Inserts the specified element at the end of the list.
@@ -48,8 +48,8 @@ public class List {
 
   /**
    * resizes the array.
-   *
-   * @return     int array.
+   *helps to resize the array when the array is full.
+   * @return returns the integer array.
    */
   public int[] resize() {
     return Arrays.copyOf(list, 2 * list.length);
@@ -64,15 +64,11 @@ public class List {
     return size;
   }
   /**.
-   * { function_description }
-   *
-   * @param      index  The index
-   * @param      item   The item
+   *This function helps in the adding the element in a particluar index.
+   * @param      index  The index of the element.
+   * @param      item   which is the element.
    */
   public void add(final int index, final int item) {
-    /**.
-     * { item_description }
-     */
     for (int i = size; i > index; i--) {
       list[i] = list[i - 1];
     }
@@ -81,11 +77,9 @@ public class List {
 
   }
   /**.
-   * { function_description }
-   *
-   * @param      index      The index
-   *
-   * @throws     Exception  { exception_description }
+   *This function helps in removing the element from the list.
+   * @param      index     integer type of element.
+   * @throws     Exception  throws the exception.
    */
   public void remove(final int index) throws Exception {
     if (index < 0 || index >= size) {
@@ -102,9 +96,7 @@ public class List {
   }
   /**
    * getter method to access an element at an index.
-   *
-   * @param      index  The index
-   *
+   * @param      index  The index whihc is an integer data type.
    * @return     int value in the list, -1 if its not there.
    */
   public int get(final int index) {
@@ -117,7 +109,6 @@ public class List {
   }
   /**
    * Returns a string representation of the object.
-   *
    * @return     String representation of the object.
    */
   public String toString() {
@@ -135,9 +126,7 @@ public class List {
   }
   /**
    * checks if a given element is present in the list.
-   *
-   * @param      item  The item
-   *
+   * @param      item  The item.
    * @return     True or False.
    */
   public boolean contains(final int item) {
@@ -145,9 +134,7 @@ public class List {
   }
   /**
    * Searches for the first match.
-   *
    * @param      item  The item
-   *
    * @return     element in the given index.
    */
   public int indexOf(final int item) {
@@ -160,8 +147,7 @@ public class List {
     return -1;
   }
   /**
-   * Adds all.
-   *
+   * Adds all the elements into the array at once by resizing the array.
    * @param      newArray  The new array
    */
   public void addAll(final int[] newArray) {
@@ -173,9 +159,7 @@ public class List {
 
   /**
    * calculates frequency of an element in the list.
-   *
-   * @param      item  The item
-   *
+   * @param      item  The item.
    * @return     count, integer.
    */
   public int count(final int item) {
@@ -189,10 +173,9 @@ public class List {
     return c;
   }
   /**.
-   * Removes all.
-   *
+   * Removes all the entered elements and checks for the exception.
+   *If there is any exception then it throws an exception.
    * @param      newArray   The new array
-   *
    * @throws     Exception  { exception_description }
    */
   public void removeAll(final int[] newArray) throws Exception {
@@ -208,12 +191,10 @@ public class List {
   /**.
    * { function_description }
    *
-   * @param      start      The start
-   * @param      end        The end
-   *
-   * @return     { description_of_the_return_value }
-   *
-   * @throws     Exception  { exception_description }
+   * @param      start      The start is the start element from whihc the sublist has to start.
+   * @param      end       end is the end element to which it has to stop.
+   * @return returns the subList from the gven parameters.
+   * @throws     Exception  throws if there is any exception.
    */
   public List subList(final int start, final int end) throws Exception {
     if (start > size || end > size) {
@@ -235,19 +216,17 @@ public class List {
     return subList;
   }
   /**
-   * compares 2 lists.
-   *
-   * @param      compList  The component list
-   *
-   * @return     true or false.
+   *Which compares to lists and returns a boolean value.
+   * @param      componentList  The component list
+   * @return     returns true or false, which is if it iow equal or not.
    */
-  public boolean equals(final List compList) {
+  public boolean equals(final List componentList) {
     // Replace the code below
-    if (size != compList.size()) {
+    if (size != componentList.size()) {
       return false;
     } else {
       for (int i = 0; i < size; i++) {
-        if (list[i] != compList.get(i)) {
+        if (list[i] != componentList.get(i)) {
           return false;
         }
       }
@@ -270,14 +249,13 @@ public class List {
     size = 0;
   }
   /**
-   * main function.
-   *
-   * @param      args  The arguments
+   * main function which contains all the method and can call the accordingly.
+   *and use them according to the user definition.
+   * @param      args  The arguments whihc are of String data type.
    */
   public static void main(final String[] args) {
     // create an object of the list to invoke methods on it
     List l = new List();
-
     // code to read the test cases input file
     Scanner stdin = new Scanner(new BufferedInputStream(System.in));
     // check if there is one more line to process
