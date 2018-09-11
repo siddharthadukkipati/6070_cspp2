@@ -8,7 +8,7 @@ import java.util.Arrays;
 class SetEmptyException extends Exception {
     /**.
      * Constructs the object.
-     * @param inputString 
+     * @param inputString
      */
     SetEmptyException(final String inputString) {
         super(inputString);
@@ -20,8 +20,7 @@ class SetEmptyException extends Exception {
 class InvalidSubsetSelectionException extends Exception {
     /**.
      * Constructs the object.
-     *
-     * @param inputString
+     * @param inputString inputString is the input String.
      */
     InvalidSubsetSelectionException(final String inputString) {
         super(inputString);
@@ -232,8 +231,8 @@ public class SortedSet extends Set {
                 inputString.add(intArray);
                 intArray = intArray(tokens[2]);
                 t.add(intArray);
-                System.out.println
-                (Arrays.deepToString(inputString.cartesianProduct(t)));
+                System.out.println(
+                	Arrays.deepToString(inputString.cartesianProduct(t)));
                 break;
 
             default:
