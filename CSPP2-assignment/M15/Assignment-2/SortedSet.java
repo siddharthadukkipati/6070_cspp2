@@ -232,7 +232,7 @@ public class SortedSet extends Set {
                 intArray = intArray(tokens[2]);
                 t.add(intArray);
                 System.out.println(
-                	Arrays.deepToString(inputString.cartesianProduct(t)));
+                    Arrays.deepToString(inputString.cartesianProduct(t)));
                 break;
 
             default:
