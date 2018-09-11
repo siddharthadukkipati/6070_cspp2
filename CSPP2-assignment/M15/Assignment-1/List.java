@@ -189,9 +189,10 @@ public class List {
     }
   }
   /**.
-   * { function_description }
-   *
-   * @param      start      The start is the start element from whihc the sublist has to start.
+   * Returns the subList of the main list and the parameters which are from
+   * the start index and the end index.
+   * @param      start      The start is the start element from which
+   * the sublist has to start.
    * @param      end       end is the end element to which it has to stop.
    * @return returns the subList from the gven parameters.
    * @throws     Exception  throws if there is any exception.
