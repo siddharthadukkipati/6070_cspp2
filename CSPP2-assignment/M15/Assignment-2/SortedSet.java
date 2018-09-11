@@ -48,7 +48,7 @@ public class SortedSet extends Set {
     /**.
      *This function mainly concentrates on the addition of the
      *elements into the set.
-     * @param item item is the element whihc we'd have to add. 
+     * @param item item is the element whihc we'd have to add.
      */
     public void add(final int item) {
         if (!contains(item)) {
@@ -58,7 +58,7 @@ public class SortedSet extends Set {
     }
     /**.
      *This getIndex() function mainly works for the indexing and gets the
-     *index of the item whihc is a element. 
+     *index of the item whihc is a element.
      * @param item item is an element through which the we'd have to check
      *the index for.
      * @return returns the particalr index of that element.
@@ -100,10 +100,11 @@ public class SortedSet extends Set {
     /**.
      * { function_description }
      *
-     * @param toElement 
-     * @return  
-     * @throws     SetEmptyException                { exception_description }
-     * @throws     InvalidSubsetSelectionException  { exception_description }
+     * @param toElement integer data type and to element.
+     * @return subSet returns the subset.
+     * @throws SetEmptyException throws the exception when the set is empty.
+     * @throws InvalidSubsetSelectionException throws when the subset is
+     *selection is invalid.
      */
     public int[] headset(final int toElement) throws SetEmptyException,
         InvalidSubsetSelectionException {
@@ -173,7 +174,8 @@ public class SortedSet extends Set {
             case "subSet":
                 try {
                     String[] arrstring = tokens[1].split(",");
-                    int[] subarray = inputString.subSet(Integer.parseInt(arrstring[0]),
+                    int[] subarray =
+                    inputString.subSet(Integer.parseInt(arrstring[0]),
                                               Integer.parseInt(arrstring[1]));
                     Set subset = new Set();
                     subset.add(subarray);
@@ -187,7 +189,8 @@ public class SortedSet extends Set {
                 break;
             case "headSet":
                 try {
-                    int[] headarray = inputString.headset(Integer.parseInt(tokens[1]));
+                    int[] headarray =
+                    inputString.headset(Integer.parseInt(tokens[1]));
                     Set headset = new Set();
                     headset.add(headarray);
                     if (headset != null) {
@@ -229,7 +232,8 @@ public class SortedSet extends Set {
                 inputString.add(intArray);
                 intArray = intArray(tokens[2]);
                 t.add(intArray);
-                System.out.println(Arrays.deepToString(inputString.cartesianProduct(t)));
+                System.out.println
+                (Arrays.deepToString(inputString.cartesianProduct(t)));
                 break;
 
             default:
