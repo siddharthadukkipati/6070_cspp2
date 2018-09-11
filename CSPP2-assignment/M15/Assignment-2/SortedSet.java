@@ -8,7 +8,7 @@ import java.util.Arrays;
 class SetEmptyException extends Exception {
     /**.
      * Constructs the object.
-     * @param inputString
+     * @param inputString inputString is the input String.
      */
     SetEmptyException(final String inputString) {
         super(inputString);
@@ -117,11 +117,10 @@ public class SortedSet extends Set {
         }
     }
     /**.
-     * { function_description }
-     *
-     * @param      inputString     { parameter_description }
-     *
-     * @return     { description_of_the_return_value }
+     *integer Array.
+     * @param      inputString which is sent as the input to
+     *the int Array.
+     * @return Array.
      */
     public static int[] intArray(final String inputString) {
         String input = inputString;
@@ -136,9 +135,9 @@ public class SortedSet extends Set {
                .toArray();
     }
     /**.
-     * { function_description }
-     *
-     * @param      args  The arguments
+     * This is the main function and through whihc we call all the
+     * method and use them accoridng to this method.
+     * @param args String type.
      */
     public static void main(final String[] args) {
         SortedSet inputString = new SortedSet();
