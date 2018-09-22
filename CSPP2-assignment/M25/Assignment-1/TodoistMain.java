@@ -1,6 +1,6 @@
-import java.util.*;
+// import java.util.*;
 import java.util.Scanner;
-import java.util.Arrays;
+// import java.util.Arrays;
 /**
  * Class for todoist main.
  */
@@ -8,8 +8,8 @@ public class TodoistMain {
     /**
     *This is a deafult contructor.
     */
-    TodoistMain() {
-    }
+    // TodoistMain() {
+    // }
 
     /**
      * Starts a test.
