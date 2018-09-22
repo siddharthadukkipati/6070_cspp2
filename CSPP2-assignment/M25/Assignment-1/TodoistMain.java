@@ -4,7 +4,7 @@ import java.util.Scanner;
 /**
  * Class for todoist main.
  */
-public class TodoistMain {
+public final class TodoistMain {
     /**
     *This is a deafult contructor.
     */
