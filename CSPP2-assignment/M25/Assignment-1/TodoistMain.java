@@ -22,9 +22,10 @@ class Task {
     *@param imp which is the importance which we give to the task.
     *@param urgent which is the urgency which we give to the task.
     *@param status which is the status of the task.
+    @throws Exception which throws exception.
     */
     Task(final String title, final String name, final int time,
-        final boolean imp, final boolean urgent,
+        final boolean imp, boolean urgent,
         final String status) throws Exception {
         if (title.equals("")) {
             throw new Exception("Title not provided");
@@ -114,11 +115,11 @@ class Todoist {
     private int size;
     /**
     *A default constructor in which certain values are initialised.
-    *size is the size of the task array.  
+    *size is the size of the task array.
     */
     Todoist() {
-        final int a = 10;
-        tasks = new Task[a];
+        final int ten = 10;
+        tasks = new Task[ten];
         size = 0;
     }
     /**
@@ -153,22 +154,27 @@ class Todoist {
     /**
     *get the next task.
     *@param inputName .
+    *@return return the next task.
     */
-    public Task getNextTask(String inputName) {
-        for(Task eachtask: tasks) {
-            if(eachtask.getPersonName().equals(inputName)
-                && eachtask.gettaskstatus().equals("todo")
-                && eachtask.getTaskImp() == true) {
+    public Task getNextTask(final String inputName) {
+        for (Task eachtask: tasks) {
+    if (eachtask.getPersonName().equals(inputName) && eachtask.gettaskstatus()
+        .equals("todo") && eachtask.getTaskImp() == true) {
                 return eachtask;
             }
         }
         return null;
     }
-} 
+}
 /**
  * Class for todoist main.
  */
 public class TodoistMain {
+    /**
+    *This is a deafult contructor.
+    */
+    TodoistMain() {
+    }
 
     /**
      * Starts a test.
@@ -242,12 +248,16 @@ public class TodoistMain {
      * @throws     Exception  if task inputs are invalid
      */
     public static Task createTask(final String[] tokens) throws Exception {
+        final int three = 3;
+        final int four = 4;
+        final int five = 5;
+        final int six = 6;
         String title = tokens[1];
         String assignedTo = tokens[2];
-        int timeToComplete = Integer.parseInt(tokens[3]);
-        boolean important = tokens[4].equals("y");
-        boolean urgent = tokens[5].equals("y");
-        String status = tokens[6];
+        int timeToComplete = Integer.parseInt(tokens[three]);
+        boolean important = tokens[four].equals("y");
+        boolean urgent = tokens[five].equals("y");
+        String status = tokens[six];
         return new Task(
                 title, assignedTo, timeToComplete, important, urgent, status);
     }
