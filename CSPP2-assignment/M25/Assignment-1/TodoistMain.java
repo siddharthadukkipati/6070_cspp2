@@ -8,7 +8,7 @@ public class TodoistMain {
     /**
     *This is a deafult contructor.
     */
-    TodoistMain() {
+    private TodoistMain() {
     }
 
     /**
