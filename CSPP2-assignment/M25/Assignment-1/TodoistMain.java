@@ -129,7 +129,13 @@ class Task {
 *To do ist class is defined to perofrom various methods on Tasks.
 */
 class Todoist {
+    /**
+    *Tasks is an array of Tasks.
+    */
     private Task[] tasks;
+    /**
+    *size of the Task Array.
+    */
     private int size;
     /**
     *A default constructor in which certain values are initialised.
