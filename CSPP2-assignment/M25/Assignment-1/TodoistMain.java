@@ -8,6 +8,9 @@ import java.util.Arrays;
 *Creating a Task class which stores all the infomration realted to Task.
 */
 class Task {
+    /**
+    *
+    */
     private String taskTitle;
     private String taskPersonName;
     private int taskTime;
@@ -25,7 +28,7 @@ class Task {
     @throws Exception which throws exception.
     */
     Task(final String title, final String name, final int time,
-        final boolean imp, boolean urgent,
+        final boolean imp, final boolean urgent,
         final String status) throws Exception {
         if (title.equals("")) {
             throw new Exception("Title not provided");
@@ -131,7 +134,7 @@ class Todoist {
     /**
     *This method basically add the task.
     *And also call the resize method when ever the size is full.
-    *@param newTask
+    *@param newTask .
     */
     public void addTask(final Task newTask) {
         if (size == tasks.length) {
