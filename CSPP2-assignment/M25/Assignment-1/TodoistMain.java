@@ -23,7 +23,8 @@ class Task {
 	*@param urgent which is the urgency which we give to the task.
 	*@param status which is the status of the task.
 	*/
-	Task(String title, String name, int time, boolean imp, boolean urgent, String status) throws Exception {
+	Task(String title, String name, int time, boolean imp,
+		boolean urgent, String status) throws Exception {
 		if(title.equals("")) {
 			throw new Exception("Title not provided");
 		}
@@ -99,7 +100,8 @@ class Task {
 		} else {
 			urg = "Not Urgent";
 		}
-		return getTaskTitle() + ", " + getPersonName() + ", " + getTaskTime() + ", " + imp + ", " + urg + ", " + gettaskstatus();
+		return getTaskTitle() + ", " + getPersonName() + ", "
+		+ getTaskTime() + ", " + imp + ", " + urg + ", " + gettaskstatus();
 	}
 
 }
@@ -146,11 +148,14 @@ class Todoist {
 		return arraystring;
 	}
 	/**
-	*
+	*get the next task.
+	*@param inputName .
 	*/
-	public Task getNextTask(String inputname) {
+	public Task getNextTask(String inputName) {
 		for(Task eachtask: tasks) {
-			if(eachtask.getPersonName().equals(inputname) && eachtask.gettaskstatus().equals("todo") && eachtask.getTaskImp() == true) {
+			if(eachtask.getPersonName().equals(inputName)
+				&& eachtask.gettaskstatus().equals("todo")
+				&& eachtask.getTaskImp() == true) {
 				return eachtask;
 			}
 		}
@@ -241,7 +246,7 @@ public class TodoistMain {
 		boolean urgent = tokens[5].equals("y");
 		String status = tokens[6];
 		return new Task(
-		           title, assignedTo, timeToComplete, important, urgent, status);
+		        title, assignedTo, timeToComplete, important, urgent, status);
 	}
 
 	/**
