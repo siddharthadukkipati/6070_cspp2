@@ -5,52 +5,52 @@ import java.util.Arrays;
   * write your code below this comment
   */
 class Task {
-	private String taskTitle;
-	private String taskPersonName;
-	private int taskTime;
+	private String tasktitle;
+	private String taskownername;
+	private int tasktime;
 	private boolean importance;
-	private boolean urjent;
-	private String taskStatus;
+	private boolean urgency;
+	private String taskstatus;
 	Task(String title, String name, int time, boolean imp, boolean urgent, String status) {
-		this.taskTitle = title;
-		this.taskPersonName = name;
-		this.taskTime = time;
+		this.tasktitle = title;
+		this.taskownername = name;
+		this.tasktime = time;
 		this.importance = imp;
-		this.urjent = urgent;
-		this.taskStatus = status;
+		this.urgency = urgent;
+		this.taskstatus = status;
 	}
-	public String getTaskTile() {
-		return this.taskTitle;
+	public String gettasktile() {
+		return this.tasktitle;
 	}
-	public String getPersonName() {
-		return this.taskPersonName;
+	public String gettaskowner() {
+		return this.taskownername;
 	}
-	public int getTaskTime() {
-		return this.taskTime;
+	public int gettasktime() {
+		return this.tasktime;
 	}
-	public boolean getTaskImp() {
+	public boolean gettaskimp() {
 		return this.importance;
 	}
-	public boolean getTaskUrgent() {
-		return this.urjent;
+	public boolean gettaskurgency() {
+		return this.urgency;
 	}
-	public String getTaskStatus() {
-		return this.taskStatus;
+	public String gettaskstatus() {
+		return this.taskstatus;
 	}
 	public String toString() {
 		String imp = "";
 		String urg = "";
-		if (getTaskImp()) {
+		if (gettaskimp()) {
 			imp = "Important";
 		} else {
 			imp = "Not Important";
 		}
-		if (getTaskUrgent()) {
+		if (gettaskurgency()) {
 			urg = "Urgent";
 		} else {
 			urg = "Not Urgent";
 		}
-		return getTaskTile() + ", " + getPersonName() + ", " + getTaskTime() + ", " + imp + ", " + urg + ", " + getTaskStatus();
+		return gettasktile() + ", " + gettaskowner() + ", " + gettasktime() + ", " + imp + ", " + urg + ", " + gettaskstatus();
 	}
 
 }
@@ -58,7 +58,7 @@ class Task {
 /**
  * Class for todoist main.
  */
-class TodoistMain {
+public class TodoistMain {
 
 	/**
 	 * Starts a test.
