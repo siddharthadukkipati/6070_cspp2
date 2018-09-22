@@ -9,13 +9,28 @@ import java.util.Arrays;
 */
 class Task {
     /**
-    *
+    *task title.
     */
     private String taskTitle;
+    /**
+    *Person Name.
+    */
     private String taskPersonName;
+    /**
+    *Task Time.
+    */
     private int taskTime;
+    /**
+    *Impotance.
+    */
     private boolean importance;
+    /**
+    *Urgent.
+    */
     private boolean urgent;
+    /**
+    *Status.
+    */
     private String taskStatus;
     /**
     *Implementing an overloaded constructor.
