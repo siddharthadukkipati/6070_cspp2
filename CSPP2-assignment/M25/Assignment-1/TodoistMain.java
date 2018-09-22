@@ -8,8 +8,8 @@ public class TodoistMain {
     /**
     *This is a deafult contructor.
     */
-    // TodoistMain() {
-    // }
+    TodoistMain() {
+    }
 
     /**
      * Starts a test.
