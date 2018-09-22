@@ -50,7 +50,7 @@ class Task {
 		} else {
 			urg = "Not Urgent";
 		}
-		return getTaskTile() + ", " + getPersonName() + ", " + getTaskTime() + ", " + imp + ", " + urg + ", " + getTaskStatus();
+		return getTaskTile()+", " +getPersonName()+ ", "+getTaskTime() + ", " + imp + ", " + urg + ", " + getTaskStatus();
 	}
 
 }
