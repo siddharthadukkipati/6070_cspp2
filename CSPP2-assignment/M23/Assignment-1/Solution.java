@@ -1,90 +1,112 @@
-import java.io.*;
 import java.util.*;
-class Frequency {
-    Frequency() {
+import java.lang.*;
+import java.io.*;
+class Data {
+	Data() {
+	}
+	public static String toText(File file) {
+		String str = "";
+		try {
+			Scanner input = new Scanner(new FileReader(file));
+			StringBuilder text = new StringBuilder();
+			while(input.hasNext()) {
+				text.append(input.next());
+				text.append(" ");
+			}
+			input.close();
+			str = text.toString();
+		} catch (FileNotFoundException e) {
+			System.out.println("No file");
+		}
+		return str;
+	}
+	public Map remove(String text) {
+		text = text.toLowerCase();
+		text = text.replaceAll("[0-9_]", "");
+		String[] words = text.split(" ");
+		Map<String, Integer> map = new HashMap<>();
+		for (String element : words) {
+		 if (element.length() > 0) {
+ 			if (!(map.containsKey(element))) {
+				map.put(element, 1);
+			} else {
+				map.put(element, map.get(element) + 1);
+			}
+		}
+	}
+		return map;
+	}
 
-    }
-    public Hashtable<String,Integer> loadWordstodict (String filename)
-    throws Exception {
-        FileInputStream fileinp = new FileInputStream(filename);
-        BufferedReader reader = new BufferedReader(
-            new InputStreamReader(fileinp));
-        String str;
-        Hashtable<String,Integer> dictionary = new Hashtable<String,Integer>();
-        try {
-            int c = 0;
-            while ((str = reader.readLine()) != null) {
-                // String s = str.replaceAll("[;:.,\"\\[\\]/!@#$%^&*()]","");
-                String s = str.replaceAll("[^a-z A-Z 0-9 _]","").toLowerCase();
-                String[] line = s.split(" ");
-                for (int i = 0; i < line.length; i++) {
-                    if (dictionary.containsKey(line[i])) {
-                        dictionary.put(line[i], dictionary.get(line[i]) + 1);
-                    } else {
-                        dictionary.put(line[i], 1);
-                    }
-                c++;
-                }
-            }
-            System.out.println(c);
-        } catch (Exception e) {
-            throw new Exception("File not found");
-        }
-        return dictionary;
-    }
+	public int similarity(String textOne, String textTwo) {
+		double numerator = 0;
+		double denominator = 1;
+		double sumOne = 0;
+		double sumTwo = 0;
+		Map <String, Integer> mapOne = remove(textOne);
+		Map <String, Integer> mapTwo = remove(textTwo);
+		for (String element: mapOne.keySet()) {
+			for (String item: mapTwo.keySet()) {
+				if (element.equals(item)) {
+					numerator += mapOne.get(element) * mapTwo.get(item);
+				}
+			}
+		}
+
+		for (String word: mapOne.keySet()) {
+			sumOne += mapOne.get(word) * mapOne.get(word);
+		}
+		for (String word: mapTwo.keySet()) {
+			sumTwo += mapTwo.get(word) * mapTwo.get(word);
+		}
+		denominator = Math.sqrt(sumOne) * Math.sqrt(sumTwo);
+		double documentDistance = ((numerator / denominator) * 100);
+		return (int)(documentDistance);
+	}
 }
+public class Solution {
+	Solution() {
 
-class Distance {
-    Distance() {
-
-    }
-    public double Euclidean(Hashtable<String,Integer> dict1) {
-        long sum = 0;
-        for(Map.Entry<String, Integer> m: dict1.entrySet()) {
-            // int val = (int)m.getValue();
-            sum += m.getValue()*m.getValue();
-        }
-        double prod = Math.sqrt(sum);
-        return prod;
-    }
-    public double DotProduct(Hashtable<String,Integer> dict1,
-        Hashtable<String,Integer> dict2) {
-        String key;
-        int sum = 0;
-        for (Map.Entry<String, Integer> m: dict1.entrySet()) {
-            key = m.getKey();
-            if (dict2.containsKey(key)) {
-                int val1 = dict1.get(key);
-                int val2 = dict2.get(key);
-                sum += (val1*val2);
-            }
-        }
-        return sum;
-    }
-    public double similarity(Hashtable<String,Integer> dictionary1,
-        Hashtable<String,Integer> dictionary2) {
-        double a = Euclidean(dictionary1);
-        double b = Euclidean(dictionary2);
-        double num = a*b;
-        double deno = DotProduct(dictionary1, dictionary2);
-        double result = deno/num;
-        return result * 100;
-    }
-}
-
-class Solution {
-    Solution () {
-
-    }
-    public static void main(String[] args) throws Exception {
-        Scanner scan = new Scanner(System.in);
-        String filename1 = scan.nextLine();
-        String filename2 = scan.nextLine();
-        Frequency f = new Frequency();
-        Distance d = new Distance();
-        System.out.format("%.2f", d.similarity(f.loadWordstodict(filename1), f.loadWordstodict(filename2)));
-        System.out.print("%");
-        // f.loadWordstodict(filename1);
-        // f.loadWordstodict(filename2);
-    }
+	}
+	public static void main(String[] args) {
+		try  {
+		Scanner scan = new Scanner(System.in);
+		String input = scan.nextLine();
+		File files = new File(input);
+		Data obj = new Data();
+		File[] fileList = files.listFiles();
+		int length = fileList.length;
+		int maxValue = 0;
+		String result = "";
+		int[][] fileMatrix = new int[length][length];
+		Map<Integer, List<String>> valuesMap = new HashMap<>();
+		for (int i = 0; i < length; i++) {
+			for (int j = 0; j < length; j++) {
+				if (i == j) {
+					fileMatrix[i][j] = 100;
+				} else {
+					fileMatrix[i][j] = obj.similarity(obj.toText(fileList[i]), obj.toText(fileList[j]));
+					if (maxValue < fileMatrix[i][j]) {
+						maxValue = fileMatrix[i][j];
+						result = "Maximum similarity is between " + fileList[i].getName() + " and " + fileList[j].getName();
+					}
+				}
+			}
+		}
+		System.out.print("      \t");
+		for (int i = 0; i < length - 1; i++) {
+			System.out.print("\t" +fileList[i].getName());
+		}
+		System.out.println("\t" + fileList[length - 1].getName());
+		for (int i = 0; i < length; i++) {
+			System.out.print(fileList[i].getName() + "\t");
+			for (int j = 0; j < length; j++) {
+					System.out.print(fileMatrix[i][j] + "\t\t");
+			}
+			System.out.println();
+		}
+	 System.out.println(result);
+	} catch (NoSuchElementException e){
+		System.out.println("empty directory");
+	}
+	}
 }
